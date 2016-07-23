@@ -41,6 +41,9 @@ launchctl unload /Library/LaunchDaemons/net.buildbot.buildslave.plist:
 launchctl load -w /Library/LaunchDaemons/net.buildbot.buildslave.plist:
   cmd.run
 
+launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist:
+  cmd.run
+
 {% else %}
 
 /etc/init/buildbot-slave.conf:
